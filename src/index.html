@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet">
+    <title>Advanced Password Generator</title>
+</head>
+<body>
+    <div class="generator">
+        <ul>
+            <label for="alphabet">Characters: </label>
+            <input id="alphabet" type="checkbox" checked>
+
+            <label for="digits">Digits: </label>
+            <input id="digits" type="checkbox" checked>
+
+            <label for="symbols">Symbols: </label>
+            <input id="symbols" type="checkbox" checked>
+        </ul>
+        <p id="result"></p>
+        <p id="copy">Copy</p>
+        <div class="length_container">
+            <label for="length" id="len_out">16</label><br>
+            <input type="range" min="8" max="64" value="16" class="slider" id="length">
+          </div>
+    </div>
+    <div class="check">
+        <p id="entropy"></p>
+        <p id="info">You can check if the password is leaked in a dictionary on <a href="https://haveibeenpwned.com/Passwords">haveibeenpwned.com</a></p>
+    </div>
+    <button id="generate">Generate!</button>
+    <script src="./js/control.js"></script>
+    <script src="./js/generate.js"></script>
+</body>
+</html>
